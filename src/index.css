@@ -1,6 +1,5 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @theme {
   --color-primary: #0d0d0d;
   --color-secondary: #191919;
@@ -9,5 +8,5 @@
 
   --color-text-secondary: #797979;
 
-  --font-mont: "Montserrat", sans-serif;
+  --font-mont: "Unbounded", sans-serif;
 }

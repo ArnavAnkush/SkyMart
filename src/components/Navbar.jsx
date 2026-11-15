@@ -7,11 +7,11 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="bg-primary text-white px-6 md:px-10 py-5 border-b border-secondary">
+    <header className="bg-primary text-white  border-b border-secondary mb-[4rem]">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="bg-accent text-primary p-3 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(200,244,0,0.15)]">
+        <div className="flex items-center justify-between gap-3">
+          <div className="bg-accent text-primary rounded-xl flex items-center p-3 justify-center shadow-[0_0_15px_rgba(200,244,0,0.15)]">
             <RiFlashlightFill size={23} />
           </div>
 
@@ -45,11 +45,13 @@ const Navbar = () => {
         <div className="flex items-center gap-3 md:gap-5">
           {/* Profile */}
           <div className="flex items-center gap-3 border border-secondary bg-secondary/40 rounded-xl p-2 pr-4 cursor-pointer hover:border-accent/40 transition-all duration-300">
-            <div className="bg-accent text-primary font-mont font-bold py-2 px-3 rounded-lg text-sm">
+            <div className="bg-accent text-primary font-mont font-[600] py-2 px-3 rounded-lg text-md">
               A
             </div>
 
-            <p className="font-mont text-xs md:text-sm tracking-wider">Arnav</p>
+            <p className="font-mont text-xs md:text-sm tracking-widest">
+              Arnav
+            </p>
           </div>
 
           {/* Cart */}
