@@ -4,12 +4,12 @@ import {
   RiShoppingCart2Line,
 } from "@remixicon/react";
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   return (
     <header className="bg-primary text-white  border-b border-secondary mb-[4rem]">
       <div className="flex items-center justify-between">
-        {/* Logo */}
         <div className="flex items-center justify-between gap-3">
           <div className="bg-accent text-primary rounded-xl flex items-center p-3 justify-center shadow-[0_0_15px_rgba(200,244,0,0.15)]">
             <RiFlashlightFill size={23} />
@@ -20,30 +20,28 @@ const Navbar = () => {
           </h3>
         </div>
 
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-12 font-mont text-sm tracking-wide text-text-secondary">
-          <a href="#" className="text-accent transition-colors duration-300">
-            Home
-          </a>
-
-          <a
-            href="#"
-            className="hover:text-accent transition-colors duration-300"
-          >
-            About
-          </a>
-
-          <a
-            href="#"
-            className="hover:text-accent transition-colors duration-300"
-          >
-            Products
-          </a>
+        <nav className="hidden md:flex items-center gap-12 font-mont text-sm tracking-wide">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Products", path: "/products" },
+          ].map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end
+              className={({ isActive }) =>
+                isActive
+                  ? "text-accent"
+                  : "text-text-secondary hover:text-accent transition-colors duration-300"
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
         </nav>
 
-        {/* User Actions */}
         <div className="flex items-center gap-3 md:gap-5">
-          {/* Profile */}
           <div className="flex items-center gap-3 border border-secondary bg-secondary/40 rounded-xl p-2 pr-4 cursor-pointer hover:border-accent/40 transition-all duration-300">
             <div className="bg-accent text-primary font-mont font-[600] py-2 px-3 rounded-lg text-md">
               A
@@ -62,7 +60,6 @@ const Navbar = () => {
             <RiShoppingCart2Line size={21} />
           </button>
 
-          {/* Logout */}
           <button
             aria-label="Logout"
             className="text-text-secondary p-3 rounded-xl border border-secondary hover:text-red-400 hover:bg-[#3A1818] hover:border-red-900 transition-all duration-300"
