@@ -9,6 +9,7 @@ const App = () => {
   return (
     <div className="bg-primary text-white min-h-screen  px-[4rem] py-[1rem]">
       <Navbar />
+      <Home />
       <AppRoutes />
     </div>
   );
